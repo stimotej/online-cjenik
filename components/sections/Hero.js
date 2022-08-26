@@ -26,7 +26,7 @@ const Hero = () => {
             <motion.h3
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              className="uppercase font-bold text-lg -mt-5"
+              className="uppercase font-bold tracking-wide sm:tracking-wider text-md sm:text-lg -mt-9 sm:-mt-5"
             >
               Online cjenik
             </motion.h3>
@@ -36,8 +36,19 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             className="flex flex-col gap-1 items-center"
           >
-            <span>Savska cesta 25</span>
-            <span>091 234 5678</span>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <Image
+                src="/sc-logo.svg"
+                width={60}
+                height={60}
+                className="text-white"
+              />
+            </motion.div>
+
+            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              Savska cesta 25
+            </motion.span>
+            {/* <span>091 234 5678</span> */}
             <SocialMedia className="mt-4" />
           </motion.div>
         </div>

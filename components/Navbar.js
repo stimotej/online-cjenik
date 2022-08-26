@@ -33,7 +33,9 @@ const Navbar = () => {
         onChange={setLanguage}
         className={clsx("top-7 left-6 z-50", menuOpened ? "fixed" : "absolute")}
       />
-      <header
+      <motion.header
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         className={clsx(
           "fixed top-0 left-0 right-0 z-40 p-6 flex items-center justify-end"
         )}
@@ -45,7 +47,7 @@ const Navbar = () => {
             className="text-white"
           />
         </button>
-      </header>
+      </motion.header>
       {menuOpened && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -105,7 +107,7 @@ const Navbar = () => {
               href="#kolaci"
               onClick={() => setMenuOpened(false)}
             >
-              Kolaci
+              Kolači
             </motion.a>
           </motion.div>
           <SocialMedia className="text-white/50 absolute bottom-6 left-1/2 transform -translate-x-1/2 z-40" />
