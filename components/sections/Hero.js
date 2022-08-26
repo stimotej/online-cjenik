@@ -15,18 +15,18 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       <div className="text-white relative z-10 p-6 box-border flex justify-center h-full">
         <div className="flex flex-col items-center justify-between">
-          <div className="flex flex-col items-end mt-20">
+          <div className="flex flex-col items-center mt-20">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="font-title text-8xl"
             >
-              Caffe bar
+              Coffee shop
             </motion.h1>
             <motion.h3
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              className="uppercase font-bold text-lg -mt-5"
+              className="uppercase font-bold text-lg -mt-5 ml-20"
             >
               Online cjenik
             </motion.h3>
