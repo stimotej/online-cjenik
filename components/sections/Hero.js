@@ -15,18 +15,18 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       <div className="text-white relative z-10 p-6 box-border flex justify-center h-full">
         <div className="flex flex-col items-center justify-between">
-          <div className="flex flex-col items-center mt-20">
+          <div className="flex flex-col items-end mt-20">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="font-title text-[5rem] sm:text-8xl"
             >
-              Coffee shop
+              Caffe bar
             </motion.h1>
             <motion.h3
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              className="uppercase font-bold text-base sm:text-lg -mt-9 sm:-mt-5 ml-16 sm:ml-20"
+              className="uppercase font-bold text-lg -mt-5"
             >
               Online cjenik
             </motion.h3>
@@ -36,7 +36,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             className="flex flex-col gap-1 items-center"
           >
-            <span>Neka Adresa 123</span>
+            <span>Savska cesta 25</span>
             <span>091 234 5678</span>
             <SocialMedia className="mt-4" />
           </motion.div>
