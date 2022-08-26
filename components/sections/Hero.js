@@ -19,14 +19,14 @@ const Hero = () => {
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="font-title text-8xl"
+              className="font-title text-[5rem] sm:text-8xl"
             >
               Coffee shop
             </motion.h1>
             <motion.h3
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              className="uppercase font-bold text-lg -mt-5 ml-20"
+              className="uppercase font-bold text-base sm:text-lg -mt-9 sm:-mt-5 ml-16 sm:ml-20"
             >
               Online cjenik
             </motion.h3>
