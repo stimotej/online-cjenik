@@ -15,6 +15,11 @@ const Kolaci = () => {
       <div className="p-6 flex flex-col gap-4 z-20 relative">
         <h2 className="font-title text-white text-4xl ">Kolači</h2>
         <div className="h-[0.5px] bg-white" />
+        <div className="text-xs text-white/50 sm:w-3/4">
+          <p className="font-bold">
+            Cijene kolača se odnose na Caffe bar SC i VIP (interno, 50%)
+          </p>
+        </div>
         <Table data={kolaci} />
       </div>
     </div>

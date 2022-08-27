@@ -5,9 +5,9 @@ const Layout = ({ children }) => {
   return (
     <div className="font-bod h-full">
       <Head>
-        <title>Online cjenik</title>
-        <meta name="description" content="Caffe bar - online cjenik" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Cjenik | Caffe barovi</title>
+        <meta name="description" content="Caffe barovi - online cjenik" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className="snap-y overflow-y-scroll scroll-smooth h-full min-h-full relative">
         <Navbar />

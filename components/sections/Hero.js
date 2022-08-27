@@ -15,13 +15,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       <div className="text-white relative z-10 p-6 box-border flex justify-center h-full">
         <div className="flex flex-col items-center justify-between">
-          <div className="flex flex-col items-end mt-20">
+          <div className="flex flex-col items-end mt-20 whitespace-nowrap">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="font-title text-[5rem] sm:text-8xl"
             >
-              Caffe bar
+              Caffe barovi
             </motion.h1>
             <motion.h3
               initial={{ opacity: 0, x: -50 }}
@@ -45,11 +45,29 @@ const Hero = () => {
               />
             </motion.div>
 
-            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="font-bold"
+            >
               Savska cesta 25
             </motion.span>
             {/* <span>091 234 5678</span> */}
-            <SocialMedia className="mt-4" />
+            {/* <SocialMedia className="mt-4" /> */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center text-xs text-white/50 md:text-white mt-4 sm:w-3/4"
+            >
+              <p className="uppercase font-bold">
+                Cijene se odnose na sljedeće lokacije:
+              </p>
+              <p>
+                Caffe bar SC, &TD, Cyber, NSK, Filofofski, FSB, Agronomijai
+                Šumarstvo, Borongaj, Indeks, TTF, Slastica, Noćni klub Pauk,
+                Cvjetno naselje, RGN, VIP (interno, 50%)
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>
