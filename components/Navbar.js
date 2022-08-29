@@ -5,11 +5,11 @@ import useDisableScroll from "../lib/useDisableScroll";
 import SocialMedia from "./SocialMedia";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import LanguageSelect from "./LanguageSelect";
+// import LanguageSelect from "./LanguageSelect";
 
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
-  const [language, setLanguage] = useState("hr");
+  // const [language, setLanguage] = useState("hr");
 
   useDisableScroll(menuOpened);
 
@@ -28,11 +28,11 @@ const Navbar = () => {
 
   return (
     <>
-      <LanguageSelect
+      {/* <LanguageSelect
         value={language}
         onChange={setLanguage}
         className={clsx("top-7 left-6 z-50", menuOpened ? "fixed" : "absolute")}
-      />
+      /> */}
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

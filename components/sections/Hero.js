@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="h-full relative snap-start" id="vrh">
       <Image
         src="/hero-bg.jpg"
-        alt="Background - coffee"
+        alt="Šalica kave"
         layout="fill"
         objectFit="cover"
         className="pointer-events-none z-0 object-left-bottom sm:object-center"
@@ -39,6 +39,7 @@ const Hero = () => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <Image
                 src="/sc-logo.svg"
+                alt="Logotip Studentskog Centra u Zagrebu"
                 width={60}
                 height={60}
                 className="text-white"
@@ -63,7 +64,7 @@ const Hero = () => {
                 Cijene se odnose na sljedeće lokacije:
               </p>
               <p>
-                Caffe bar SC, &TD, Cyber, NSK, Filofofski, FSB, Agronomijai
+                Caffe bar SC, &TD, Cyber, NSK, Filozofski, FSB, Agronomija i
                 Šumarstvo, Borongaj, Indeks, TTF, Slastica, Noćni klub Pauk,
                 Cvjetno naselje, RGN, VIP (interno, 50%)
               </p>

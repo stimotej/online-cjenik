@@ -10,10 +10,10 @@ const SocialMedia = ({ className }) => {
       animate={{ opacity: 1 }}
       className={clsx("flex gap-6", className)}
     >
-      <a href="#">
+      <a href="https://www.facebook.com/sczg.unizg/">
         <FontAwesomeIcon icon={faFacebook} size="2x" />
       </a>
-      <a href="#">
+      <a href="https://www.instagram.com/sczagreb/">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
     </motion.div>
