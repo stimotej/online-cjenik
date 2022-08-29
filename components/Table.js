@@ -9,10 +9,10 @@ const Table = ({ data }) => {
           >
             <td>{item.title}</td>
             <td className="text-right whitespace-nowrap p-1">
-              {item.price_kn} kn
+              {item.price_kn.toLocaleString()} kn
             </td>
             <td className="text-right whitespace-nowrap p-1">
-              {item.price_eur} €
+              {item.price_eur.toLocaleString()} €
             </td>
           </tr>
         ))}
