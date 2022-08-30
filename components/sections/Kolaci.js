@@ -21,6 +21,12 @@ const Kolaci = () => {
           </p>
         </div>
         <Table data={kolaci} />
+        <div className="text-xs text-white/50 sm:w-3/4">
+          <p className="font-bold">
+            * Sladoledi označeni sa zvjezdicom odnose se samo na ponudu za Caffe
+            bar Agronomija i šumarstvo
+          </p>
+        </div>
       </div>
     </div>
   );
