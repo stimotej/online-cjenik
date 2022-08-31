@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { vino } from "../../lib/tableData";
+// import { vino } from "../../lib/tableData";
+import { vino } from "../../lib/mzoTableData";
 import Table from "../Table";
 
 const Vino = () => {

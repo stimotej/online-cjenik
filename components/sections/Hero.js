@@ -58,16 +58,12 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center text-xs text-white/50 md:text-white mt-4 sm:w-3/4"
+              className="text-center text-xs text-white/50 md:text-white mt-4"
             >
               <p className="uppercase font-bold">
                 Cijene se odnose na sljedeće lokacije:
               </p>
-              <p>
-                Caffe bar SC, &TD, Cyber, NSK, Filozofski, FSB, Agronomija i
-                Šumarstvo, Borongaj, Indeks, TTF, Slastica, Noćni klub Pauk,
-                Cvjetno naselje, RGN, VIP (interno, 50%)
-              </p>
+              <p className="mt-1">Caffe bar Svetice i Čajna kuhinja Svetice</p>
             </motion.div>
           </motion.div>
         </div>

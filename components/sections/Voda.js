@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { voda } from "../../lib/tableData";
+// import { voda } from "../../lib/tableData";
+import { voda } from "../../lib/mzoTableData";
 import Table from "../Table";
 
 const Voda = () => {
