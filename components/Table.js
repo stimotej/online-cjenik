@@ -8,9 +8,9 @@ const Table = ({ data }) => {
             className="border-b-[0.5px] border-white/20 last:border-0"
           >
             <td>{item.title}</td>
-            <td className="text-right whitespace-nowrap p-1">
+            {/* <td className="text-right whitespace-nowrap p-1">
               {item.price_kn.toLocaleString()} kn
-            </td>
+            </td> */}
             <td className="text-right whitespace-nowrap p-1">
               {item.price_eur.toLocaleString()} €
             </td>

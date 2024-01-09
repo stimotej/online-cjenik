@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SocialMedia from "../SocialMedia";
 import { motion } from "framer-motion";
 
 const Hero = () => {
