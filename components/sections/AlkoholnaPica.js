@@ -1,6 +1,6 @@
 import Image from "next/image";
-// import { alkoholnaPica } from "../../lib/tableData";
-import { alkoholnaPica } from "../../lib/mzoTableData";
+import { alkoholnaPica } from "../../lib/tableData";
+// import { alkoholnaPica } from "../../lib/mzoTableData";
 import Table from "../Table";
 
 const AlkoholnaPica = () => {

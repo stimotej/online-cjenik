@@ -1,6 +1,6 @@
 import Image from "next/image";
-// import { pivo } from "../../lib/tableData";
-import { pivo } from "../../lib/mzoTableData";
+import { pivo } from "../../lib/tableData";
+// import { pivo } from "../../lib/mzoTableData";
 import Table from "../Table";
 
 const Pivo = () => {

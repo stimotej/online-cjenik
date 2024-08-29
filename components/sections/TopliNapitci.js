@@ -1,6 +1,6 @@
 import Image from "next/image";
-// import { topliNapitci } from "../../lib/tableData";
-import { topliNapitci } from "../../lib/mzoTableData";
+import { topliNapitci } from "../../lib/tableData";
+// import { topliNapitci } from "../../lib/mzoTableData";
 import Table from "../Table";
 
 const TopliNapitci = () => {

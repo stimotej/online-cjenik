@@ -10,6 +10,7 @@ const Hero = () => {
         layout="fill"
         objectFit="cover"
         className="pointer-events-none z-0 object-left-bottom sm:object-center"
+        priority
       />
       <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       <div className="text-white relative z-10 p-6 box-border flex justify-center h-full">
@@ -57,12 +58,17 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center text-xs text-white/50 md:text-white mt-4"
+              className="text-center text-xs text-white/50 md:text-white mt-4 max-w-2xl"
             >
               <p className="uppercase font-bold">
                 Cijene se odnose na sljedeće lokacije:
               </p>
-              <p className="mt-1">Caffe bar Svetice i Čajna kuhinja Svetice</p>
+              {/* <p className="mt-1">Caffe bar Svetice i Čajna kuhinja Svetice</p> */}
+              <p className="mt-1">
+                Caffe bar SC, &TD, Cyber, NSK, Filozofski, FSB, Agronomija i
+                Šumarstvo, Borongaj, Indeks, TTF, Slastica, Noćni klub Pauk,
+                Cvjetno naselje, RGN, VIP (interno, 50%)
+              </p>
             </motion.div>
           </motion.div>
         </div>
