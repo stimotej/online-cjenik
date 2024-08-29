@@ -7,7 +7,7 @@ const Voda = () => {
   return (
     <div className="min-h-full snap-start bg-[#1A272F] relative" id="voda">
       <Image
-        src="/voda.jpg"
+        src="/caffe-barovi/cjenik/voda.jpg"
         alt="Voda"
         layout="fill"
         className="pointer-events-none z-0 object-left-bottom sm:object-center object-cover"

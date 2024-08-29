@@ -13,7 +13,7 @@ const Kolaci = () => {
       id="deserti-i-sladoledi"
     >
       <Image
-        src="/kolaci.jpg"
+        src="/caffe-barovi/cjenik/kolaci.jpg"
         alt="Kolači"
         layout="fill"
         className="pointer-events-none z-0 object-left-bottom sm:object-center object-contain sm:object-cover"

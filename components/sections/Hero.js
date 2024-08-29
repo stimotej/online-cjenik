@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="h-full relative snap-start" id="vrh">
       <Image
-        src="/hero-bg.jpg"
+        src="/caffe-barovi/cjenik/hero-bg.jpg"
         alt="Šalica kave"
         layout="fill"
         objectFit="cover"
@@ -38,7 +38,7 @@ const Hero = () => {
           >
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <Image
-                src="/sc-logo.svg"
+                src="/caffe-barovi/cjenik/sc-logo.svg"
                 alt="Logotip Studentskog Centra u Zagrebu"
                 width={60}
                 height={60}

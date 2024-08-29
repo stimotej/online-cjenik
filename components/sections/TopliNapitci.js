@@ -10,7 +10,7 @@ const TopliNapitci = () => {
       id="topli-napitci"
     >
       <Image
-        src="/topli-napitci.jpg"
+        src="/caffe-barovi/cjenik/topli-napitci.jpg"
         alt="Topli napitci"
         layout="fill"
         className="pointer-events-none z-0 object-left-bottom sm:object-center object-contain sm:object-cover"

@@ -10,7 +10,7 @@ const BezalkoholnaPica = () => {
       id="bezalkoholna-pica"
     >
       <Image
-        src="/bezalkoholna-pica.jpg"
+        src="/caffe-barovi/cjenik/bezalkoholna-pica.jpg"
         alt="Bezalkoholno piće"
         layout="fill"
         className="pointer-events-none z-0 object-left-bottom sm:object-center object-contain sm:object-cover"

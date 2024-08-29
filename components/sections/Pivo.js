@@ -7,7 +7,7 @@ const Pivo = () => {
   return (
     <div className="min-h-full snap-start bg-[#1C1D22] relative" id="pivo">
       <Image
-        src="/pivo.jpg"
+        src="/caffe-barovi/cjenik/pivo.jpg"
         alt="Pivo"
         layout="fill"
         className="pointer-events-none z-0 object-left-top object-cover"
