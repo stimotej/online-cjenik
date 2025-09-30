@@ -76,13 +76,6 @@ const Navbar = () => {
             </motion.a>
             <motion.a
               variants={item}
-              href="#voda"
-              onClick={() => setMenuOpened(false)}
-            >
-              Voda
-            </motion.a>
-            <motion.a
-              variants={item}
               href="#pivo"
               onClick={() => setMenuOpened(false)}
             >
@@ -107,7 +100,7 @@ const Navbar = () => {
               href="#deserti-i-sladoledi"
               onClick={() => setMenuOpened(false)}
             >
-              Deserti i sladoledi
+              Deserti i torte
             </motion.a>
           </motion.div>
           <SocialMedia className="text-white/50 absolute bottom-6 left-1/2 transform -translate-x-1/2 z-40" />

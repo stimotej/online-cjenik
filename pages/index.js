@@ -6,7 +6,6 @@ import Kolaci from "../components/sections/Kolaci";
 import Pivo from "../components/sections/Pivo";
 import TopliNapitci from "../components/sections/TopliNapitci";
 import Vino from "../components/sections/Vino";
-import Voda from "../components/sections/Voda";
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
       <Hero />
       <TopliNapitci />
       <BezalkoholnaPica />
-      <Voda />
+      {/* <Voda /> */}
       <Pivo />
       <AlkoholnaPica />
       <Vino />
