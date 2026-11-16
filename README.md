@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Online cjenik caffe barova SC-a
 
-## Getting Started
+Jedna Next.js aplikacija koja poslužuje više QR cjenika. Koji se cjenik gradi i
+poslužuje određuje varijabla okoline `CJENIK`.
 
-First, run the development server:
+| `CJENIK`       | Adresa                       | Lokacije                                        | Port |
+| -------------- | ---------------------------- | ----------------------------------------------- | ---- |
+| `caffe-barovi` | `/caffe-barovi/cjenik`       | svi caffe barovi osim niže navedenih            | 3000 |
+| `caffe-mzo`    | `/caffe-mzo/cjenik`          | Caffe bar Svetice i Čajna kuhinja Svetice       | 3001 |
+| `pauk-td-kino` | `/caffe-pauk-td-kino/cjenik` | Noćni klub Pauk, Caffe bar &TD i Caffe bar Kino | 3005 |
+
+Ako `CJENIK` nije postavljen, koristi se `caffe-barovi`.
+
+## Gdje je što
+
+- `cjenik.config.js`: popis cjenika i njihove adrese (`basePath`).
+- `lib/menus/<cjenik>.js`: artikli i cijene pojedinog cjenika te raspored sekcija.
+- `components/sectionStyles.js`: izgled sekcija (pozadinska slika, boje, naziv u izborniku).
+- `ecosystem.config.js`: pm2 procesi i portovi.
+
+## Dvojno iskazivanje cijena
+
+Svaki artikl ima dvije cijene:
+
+- `price_eur`: aktualna cijena (lijevi stupac, podebljano)
+- `price_eur_anchor`: cijena na dan 10.9.2026. (desni stupac, kurziv)
+
+Kod promjene cijene mijenja se samo `price_eur`. `price_eur_anchor` je povijesni
+podatak i ostaje isti. Build pada ako nekom artiklu nedostaje jedna od cijena.
+
+## Novi cjenik
+
+1. Dodati unos u `cjenik.config.js`.
+2. Dodati `lib/menus/<cjenik>.js` i upisati ga u `lib/menus/index.js`.
+3. Dodati proces u `ecosystem.config.js` i `Location` blok u Apache konfiguraciju.
+
+## Razvoj
 
 ```bash
-npm run dev
-# or
-yarn dev
+CJENIK=caffe-mzo npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Stranica je na `http://localhost:3000` + adresa cjenika iz tablice.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Build i pokretanje
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Svaki cjenik ima svoj build direktorij (`.next-<cjenik>`), pa svi žive u istom checkoutu.
+`CJENIK` mora biti isti kod builda i kod pokretanja.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run build:all
+pm2 start ecosystem.config.js
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Napomena: token za Font Awesome Pro u `.npmrc` više ne vrijedi, pa `npm ci` na čistom
+checkoutu ne prolazi. Na poslužitelju treba zadržati postojeći `node_modules`.

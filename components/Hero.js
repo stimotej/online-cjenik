@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Hero = () => {
+const Hero = ({ locations, basePath, anchorDate }) => {
   return (
     <div className="h-full relative snap-start" id="vrh">
       <Image
-        src="/caffe-barovi/cjenik/hero-bg.jpg"
+        src={`${basePath}/hero-bg.jpg`}
         alt="Šalica kave"
         layout="fill"
         objectFit="cover"
@@ -38,7 +38,7 @@ const Hero = () => {
           >
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <Image
-                src="/caffe-barovi/cjenik/sc-logo.svg"
+                src={`${basePath}/sc-logo.svg`}
                 alt="Logotip Studentskog Centra u Zagrebu"
                 width={60}
                 height={60}
@@ -53,8 +53,6 @@ const Hero = () => {
             >
               Savska cesta 25
             </motion.span>
-            {/* <span>091 234 5678</span> */}
-            {/* <SocialMedia className="mt-4" /> */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -63,11 +61,9 @@ const Hero = () => {
               <p className="uppercase font-bold">
                 Cijene se odnose na sljedeće lokacije:
               </p>
-              {/* <p className="mt-1">Caffe bar Svetice i Čajna kuhinja Svetice</p> */}
-              <p className="mt-1">
-                Caffe bar SC, &TD, Cyber, NSK, Filozofski, FSB, Agronomija i
-                Šumarstvo, Borongaj, Indeks, TTF, Slastica, Noćni klub Pauk,
-                Cvjetno naselje, RGN, VIP (interno, 50%)
+              <p className="mt-1">{locations}</p>
+              <p className="mt-3">
+                Uz aktualnu cijenu istaknuta je i cijena na dan {anchorDate}
               </p>
             </motion.div>
           </motion.div>

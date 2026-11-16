@@ -1,23 +1,38 @@
 import Layout from "../components/Layout";
-import AlkoholnaPica from "../components/sections/AlkoholnaPica";
-import BezalkoholnaPica from "../components/sections/BezalkoholnaPica";
-import Hero from "../components/sections/Hero";
-import Kolaci from "../components/sections/Kolaci";
-import Pivo from "../components/sections/Pivo";
-import TopliNapitci from "../components/sections/TopliNapitci";
-import Vino from "../components/sections/Vino";
+import Hero from "../components/Hero";
+import Section from "../components/Section";
+import { resolveCjenik } from "../cjenik.config";
+import { ANCHOR_DATE, getMenu } from "../lib/menus";
 
-export default function Home() {
+export default function Home({ menu, basePath, anchorDate }) {
   return (
-    <Layout>
-      <Hero />
-      <TopliNapitci />
-      <BezalkoholnaPica />
-      {/* <Voda /> */}
-      <Pivo />
-      <AlkoholnaPica />
-      <Vino />
-      <Kolaci />
+    <Layout sections={menu.sections} basePath={basePath}>
+      <Hero
+        locations={menu.locations}
+        basePath={basePath}
+        anchorDate={anchorDate}
+      />
+      {menu.sections.map((section) => (
+        <Section
+          key={section.type}
+          section={section}
+          basePath={basePath}
+          anchorDate={anchorDate}
+        />
+      ))}
     </Layout>
   );
+}
+
+// Cjenik se bira pri buildu, pa u stranicu ulaze samo podaci odabranog cjenika.
+export async function getStaticProps() {
+  const { id, basePath } = resolveCjenik(process.env.CJENIK);
+
+  return {
+    props: {
+      menu: getMenu(id),
+      basePath,
+      anchorDate: ANCHOR_DATE,
+    },
+  };
 }

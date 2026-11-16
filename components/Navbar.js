@@ -5,9 +5,10 @@ import useDisableScroll from "../lib/useDisableScroll";
 import SocialMedia from "./SocialMedia";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import { SECTION_STYLES } from "./sectionStyles";
 // import LanguageSelect from "./LanguageSelect";
 
-const Navbar = () => {
+const Navbar = ({ sections }) => {
   const [menuOpened, setMenuOpened] = useState(false);
   // const [language, setLanguage] = useState("hr");
 
@@ -60,48 +61,19 @@ const Navbar = () => {
             animate="show"
             className="flex flex-col gap-8 items-center justify-center h-full text-white font-bold"
           >
-            <motion.a
-              variants={item}
-              href="#topli-napitci"
-              onClick={() => setMenuOpened(false)}
-            >
-              Topli napitci
-            </motion.a>
-            <motion.a
-              variants={item}
-              href="#bezalkoholna-pica"
-              onClick={() => setMenuOpened(false)}
-            >
-              Bezalkoholna pića
-            </motion.a>
-            <motion.a
-              variants={item}
-              href="#pivo"
-              onClick={() => setMenuOpened(false)}
-            >
-              Pivo
-            </motion.a>
-            <motion.a
-              variants={item}
-              href="#alkoholna-pica"
-              onClick={() => setMenuOpened(false)}
-            >
-              Alkoholna pića
-            </motion.a>
-            <motion.a
-              variants={item}
-              href="#vino"
-              onClick={() => setMenuOpened(false)}
-            >
-              Vino
-            </motion.a>
-            <motion.a
-              variants={item}
-              href="#deserti-i-sladoledi"
-              onClick={() => setMenuOpened(false)}
-            >
-              Deserti i torte
-            </motion.a>
+            {sections.map((section) => {
+              const style = SECTION_STYLES[section.type];
+              return (
+                <motion.a
+                  key={style.id}
+                  variants={item}
+                  href={`#${style.id}`}
+                  onClick={() => setMenuOpened(false)}
+                >
+                  {section.nav || style.nav}
+                </motion.a>
+              );
+            })}
           </motion.div>
           <SocialMedia className="text-white/50 absolute bottom-6 left-1/2 transform -translate-x-1/2 z-40" />
         </motion.div>
